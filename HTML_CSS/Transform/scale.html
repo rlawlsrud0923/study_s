@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>transform: skew</title>
+<style type="text/css">
+/*
+	{ transform:scale } : x축이나 , y축으로 확대/축소 
+
+	x축으로 기울기
+	transform:scaleX(x축 비율);
+
+	y축으로 기울기
+	transform:scaleY(y축 비율);
+
+	x,y축으로 동시 기울기
+	transform:scale(x축 비율, y축 비율);
+
+*/
+*{margin: 0; padding: 0;}
+div{
+	width: 200px; height: 200px;
+	margin: 50px;
+	border: 1px solid black;
+	float: left;
+}
+div p{
+	width: 100%; height: 100%;
+	background-color: hotpink;
+	opacity: 0.3;
+}
+
+/* scale 기준값 = 1  //  0을 주면 사라짐 */
+div:nth-child(1) p{
+	transform: scaleX(2);
+}
+div:nth-child(2) p{
+	transform: scaleY(0.5);
+}
+div:nth-child(3) p{
+	transform: scale(2, 1.5);
+}
+</style>
+</head>
+<body>
+
+<div>
+	<p></p>
+</div>
+
+<div>
+	<p></p>
+</div>
+
+<div>
+	<p></p>
+</div>
+</body>
+</html>

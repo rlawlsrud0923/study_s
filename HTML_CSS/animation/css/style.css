@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+
+#wrap{
+	position: relative;
+	width: 100%; height: 900px;
+	background: #d21f35;
+}
+
+
+
+/* logo */
+#logo:before{
+	content: "";
+	display: inline-block;
+	width: 30px; height: 30px;
+	background: #f6f312;
+	margin-right: 20px;
+	border-radius: 50%;
+}
+#logo{
+	margin-left: 100px;
+	color: #c0e8e0;
+	font-weight: bold;
+	font-size: 58px;
+	text-decoration: none;
+}
+
+
+/* hgroup */
+#title{
+	position: absolute;
+	left:40%;
+	top:30%;
+	margin-left: -70px;
+	opacity: 0;
+	animation: tit 2s;
+	animation-delay: 11s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+#title h1 {
+	color: #58C1E1;
+	font-weight: bold;
+	font-size: 42px;
+}
+#title h2 {
+	color:#663366;
+	font-weight:bold;
+	font-size:30px;
+}
+@keyframes tit {
+	from{ opacity: 0;}
+	to  { opacity: 1;}
+}
+
+
+
+/* ani */
+#ani1 {
+	position: absolute;
+	bottom: 0; right: -640px;
+	animation: ani1 6s;
+	animation-delay: 3s;
+	opacity: 0;
+}
+
+@keyframes ani1 {
+	from{ right:-640px; opacity: 0.5;}
+	40%  { right: 5%; opacity: 1;}
+	70%  { right: 5%; opacity: 1;}
+	to  { right: 5%; opacity: 0;}
+}
+
+#ani2 {
+	position: absolute;
+	top: 0px; left: 0px;
+	animation: ani2 2s; /* ani2 애니메이션을 2s간 실행*/
+	animation-delay: 9s; /*ani1의 애니메이션 시간(6s) + 지연시간(3s)*/
+	opacity: 0;
+	animation-fill-mode: forwards;
+	/*
+		animation-fill-mode : 애니메이션이 끝난 후 처음 상태로 돌아갈 지, 현 상태를 유지할 지를 설정.
+		
+		애니메이션이 끝난 후의 움직임 기본 값을 설정한 경우
+		animation-fill-mode : none;
+	  
+		애니메이션이 끝난 후 처음으로 돌아가게 설정한 경우
+		animation-fill-mode : forwards;
+  
+		애니메이션이 끝난 후 끝으로 돌아가게 설정한 경우
+		animation-fill-mode : backwards;
+  
+		애니메이션이 끝난 후 양쪽으로 돌아가게 설정한 경우
+		animation-fill-mode : both;
+  
+		부모 요소로부터 상속을 설정한 경우
+		animation-fill-mode : inherit;
+
+	*/
+}
+
+@keyframes ani2 {
+	from{ top: 0px; opacity: 0;}
+	to  { top: 200px; left: 15%; opacity: 1;}
+}
+

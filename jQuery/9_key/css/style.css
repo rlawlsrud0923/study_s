@@ -1,0 +1,82 @@
+
+* { margin:0; padding:0; }
+
+#logo {
+	width:300px; height:100px;
+	background-image:url(../images/logo.png);
+	margin:50px auto;
+}
+
+#control {
+	width:180px; height:180px; border-radius:50%;
+	background-color:#d6423e;
+	margin:40px;
+}	
+
+#control a {
+	width:180px; height:25px; 
+	background-image:url(../images/arrow.png);
+	display:block;
+	background-repeat:no-repeat;
+	background-position:center top;
+	margin:20px 0;
+}
+
+#control a#bottom { background-position:center bottom; }
+
+#height {
+	width:150px; height:50px; line-height:50px;
+	margin:0 auto;
+	background:#fff;
+	border-radius:20px;
+	font-size:30px; color:#d4433b;
+	text-align:center;
+}
+
+#control { overflow:hidden; }
+
+#simpson {
+	width:300px;
+	position:absolute; bottom:0;
+	left:50%; margin-left:-150px;
+}	
+
+#face { width:300px; height:200px; background-image:url(../images/face.png); }
+#body { width:300px; height:150px; background-image:url(../images/body.png); }
+#leg { width:300px; height:100px; background-image:url(../images/leg.png); background-position:bottom;
+}
+
+.result{
+	border: solid 10px black;
+	width: 200px; 
+	height: 30px;
+	line-height: 30px;
+	margin-top: 30px;
+	text-align: center;
+}
+/* .box{
+	width: 100px;
+	height: 100px;
+	background-color: #F00;
+	margin: 200px auto;
+
+	position: relative;
+} */
+
+/*
+	position
+	: relative 현재 위치 기준
+	: absolute 브라우저 기준
+
+	: static 없애기
+	: fixed 브라우저, 스크롤 고정
+*/
+
+
+
+
+
+
+
+
+

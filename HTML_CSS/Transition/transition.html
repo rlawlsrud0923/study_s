@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>transform: rotate, origin</title>
+<style type="text/css">
+/*
+	transition 속성 :  javaScript를 사용하지 않고 css3만으로 플래쉬의 모션 효과를 줄 수있는 속성.
+
+	transition은 간단하게 직관적인 모션을 제작할 수 있고 효과 또한 탁월
+
+	활용방향 : transition은 보통 가상 선택자 :hover를 이용해서 마우스 오버시 변경된 css 형태로 전환 효과를 적용.
+
+	{ transition : 속성명   전환시간   가속도 설정   지연시간; }
+	{transition: background 2s ease 1s;}
+
+	2가지 이상의 속성을 작성할 때
+	{transition: background 2s ease 1s, padding 1s linear 2s;}
+*/
+*{margin: 0; padding: 0;}
+div{
+	width: 200px; height: 200px;
+	margin: 50px;
+	border: 1px solid black;
+	float: left;
+}
+div p{
+	width: 100%; height: 100%;
+	background-color: black;
+	opacity: 0.3;
+}
+div p span{display: block; width: 30px; height: 30px; background: red;}
+
+/* transition 변화		/	부모속성에 hover시켜야 버벅거리는 에러 생기지 않음 */
+div:nth-child(1):hover p{	/* p에 hover시키면 box 벗어난 경우 동작에 에러 생기니까 div에 hover 시켜야 됨 */
+	transform: translateX(100px);
+	transition: all 1s;  /* 모든 속성에 적용*/
+}
+div:nth-child(2):hover p{
+	transform-origin: left top; /*transform-origin을 기준으로 rotate됨*/
+	transform: rotate(50deg);
+	transition-duration: 2s;
+}
+div:nth-child(3):hover p{
+	transform: scaleX(1.5);
+	background: yellow;
+	transition-duration: 0.5s;
+}
+div:nth-child(4):hover p{
+	transform: scale(0);
+	transition-duration: 3s;
+}
+</style>
+</head>
+<body>
+
+<div>
+	<p><span></span></p>
+</div>
+
+<div>
+	<p><span></span></p>
+</div>
+
+<div>
+	<p><span></span></p>
+</div>
+
+<div>
+	<p><span></span></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+@charset "utf-8";
+* { margin:0; padding:0; list-style:none; outline: 1px solid #00F;}
+
+
+body{
+	background-image : url(../images/bg.jpg);
+}
+.btn1,.btn2{
+	position: fixed;
+	top: 0; left: 0;
+	padding: 20px;
+}
+
+.pic{
+	width : 600px; height : 600px;
+	border : dashed 10px #fff;
+	margin : 100px auto;
+	padding : 30px;
+	
+	position : relative;
+}
+
+.pic img{
+	width : 600px;
+	position : absolute;
+	top : 30px; left : 30px;
+
+	transition: all 0.5s;
+}
+
+
+.pic img:nth-child(1){ transform : translate(-600px, -600px) rotate(30deg); }
+.pic img:nth-child(2){ transform : translate(600px, -600px) rotate(-30deg); }
+.pic img:nth-child(3){ transform : translate(600px, 600px) rotate(30deg); }
+.pic img:nth-child(4){ transform : translate(-600px, 600px) rotate(-30deg); }
+.pic img:nth-child(5){ transform : translate(-800px, 300px) rotate(30deg); }
+.pic img:nth-child(6){ transform : translate(800px, 300px) rotate(-30deg); }
+.pic img:nth-child(7){ transform : translate(-800px, -300px) rotate(60deg); }
+.pic img:nth-child(8){ transform : translate(800px, -300px) rotate(-60deg); }
+
+/* 이미지 화면 중앙으로 보내는 클래스 */
+.on{
+	transform: translate(0,0) rotate(0) !important;
+}
+
+
+.nav{
+	position: fixed;
+	top: 0; left: 0;
+	padding: 50px 0;
+	background-color: #000;
+	width: 100%;
+	text-align: center;
+}
+button{
+	padding: 20px 40px;
+}
+
+.title{
+	width: 300px; height: 50px;
+	line-height: 50px;
+	border: 3px solid #F00;
+	margin: 0 auto 10px;
+	color: #FFF;
+}

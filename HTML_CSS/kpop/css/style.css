@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+
+body, ul, h1, h3, p {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color:#1d5468;
+	font-family:'arial';
+	color:#999;
+}
+
+html,body {
+	width:100%;
+	height:100%;
+}
+
+.wrapper {
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+
+
+/* header */
+#header {
+	background-color: #DFBC6B;
+	transition: all 0.5s; /*반응형 크기 변화시 부드럽게 변하게 해주기*/
+}
+
+#header .logo {
+	display: inline-block;
+	width: 280px;
+	height: 50px;
+	margin: 20px;
+	color: #fff;
+	font-size: 32px;
+	text-shadow: 0 5px 5px rgba(0,0,0,0.5);
+}
+
+
+
+/* gnb */
+#header .gnb {
+    background-color: #1D5468;
+    overflow: hidden;
+}
+
+#header .gnb li {
+    float: left;
+    text-align: center;
+	transition: all 0.5s; /*반응형 크기 변화시 부드럽게 변하게 해주기*/
+}
+
+#header .gnb li a {
+    display: block;
+    height: 50px; 
+    line-height: 50px;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+#header .gnb li a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.header-inner {    
+    position: relative;
+}
+
+.header-inner .up {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+
+
+
+/* contents */
+#contents .movie-list{
+    background-color: #181c1f;
+    padding: 10px;
+	overflow: hidden;
+}
+#contents .movie-list > li{ /*직계 li에만 적용*/
+	float: left;
+	width: 20%; /*100% / 5 = 20%*/
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.5s; /*반응형 크기 변화시 부드럽게 변하게 해주기*/
+}
+#contents .movie-list li .inner{
+	margin: 10px;
+	background-color: #0E2C34;
+}
+#contents .movie-list li img{
+	width: 200px; height: 140px;
+}
+#contents .movie-list li h3{
+	padding: 15px 10px 0 20px;
+	font: normal 20px/1 'Raleway';
+	color: #dfbc6b;
+	text-align: left;
+	text-shadow: 2px 2px 2px #000;
+}
+#contents .movie-list li p{
+	padding: 20px;
+	line-height: 1.4;
+	font-size: 12px;
+	text-align: left;
+	word-break: break-all; /*W값에 맞춰 자동 줄바꿈된다 - 단어가 긴 영문에 사용됨*/
+}
+
+
+
+/* movie-button */
+.movie-button{
+	display: inline-block; /*영역 찾아주기*/
+	border-top: 1px solid #4b4e43;
+}
+.movie-button li{
+	float: left;
+}
+
+.movie-button li a {
+	display: block;
+	width: 50px; height: 50px;
+	text-indent: -9999px;
+	background-image: url(../images/sprite-btn.png);
+}
+.movie-button li a.view{background-position: left;} /*크기,높이 같으니까*/
+.movie-button li a.like{background-position: center;}
+.movie-button li a.share{background-position: right;}
+.movie-button li a:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+
+
+
+/* footer */
+#footer{
+	background-color: #0e2c34;
+	margin-top: 40px;
+	border-top: 1px solid #666;
+}
+#footer .inner{
+	padding: 30px 0;
+	color: #666;
+}
+
+
+
+
+/*@media all and 각각의 속성에 띄어쓰기 해주기*/
+/* desktop */
+@media all and (min-width: 1140px) {
+	.wrapper{
+		max-width: 1140px;
+	}
+}
+
+/* notebook */
+@media all and (max-width: 1024px) {
+	#contents .movie-list > li{
+		width: 33.3333%; /*3줄 정렬*/
+	}
+}
+
+/* tablet */
+@media all and (max-width: 768px){
+	#header{
+		text-align: center;
+	}
+	.header-inner .up {
+		display: none; /*기타 이미지 없애주기*/
+	}
+	.gnb li{
+		width: 20%; /*영역 재분배*/
+	}
+	#contents .movie-list > li {
+		width: 50%; /*2줄 정렬*/
+	}
+}
+
+/* mobile */
+@media all and (max-width: 480px){
+	.wrapper{
+		padding: 0;
+	}
+	#header{
+		text-align: center;
+		width: 100%;
+		
+		/*화면 상단에 고정 - 스크롤해도 그자리에 고정*/
+		position: fixed;
+		top: 0; left: 0;
+		box-shadow: 0 5px 5px rgba(0,0,0,0.5); /*음영*/
+	}
+	#header .logo{
+		margin: 20px 0 0 0;
+	}
+	.movie-list{
+		margin-top: 120px; /*header 아래로 잘린 부위 보이게 해주기*/
+	}
+	#contents .movie-list > li {
+		width: 100%; /*1줄 정렬*/
+	}
+	.movie-list > li .inner{
+		margin: 0px;
+		padding-top: 40px;
+	}
+	.movie-list > li .inner h3{
+		text-align: center;
+	}
+	.movie-list > li .inner p{
+		text-align: center;
+	}
+	#footer{
+		margin: 0;
+		text-align: center;
+	}
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>shadow 속성::gradient</title>
+<style type="text/css">
+div{
+	width: 300px; height: 300px;
+	float: left;
+	margin: 30px;
+}
+/* 선형 그라디언트 linear-gradient*/
+div:nth-child(1){
+	background: linear-gradient(to right,black,red); /* to로 시작지점 설정*/
+}
+div:nth-child(2){
+	background: linear-gradient(to bottom,blue,red); /*위 >> 아래*/
+}
+div:nth-child(3){
+	background: linear-gradient(-45deg,orange,yellow); /*각도로 방향 정하기*/
+}
+
+/* 원형 그라디언트 radial-gradient */
+div:nth-child(4){
+	background: radial-gradient(yellow,black); /*각도로 방향 정하기*/
+}
+</style>
+</head>
+<body>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>

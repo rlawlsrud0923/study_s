@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>shadow 속성::text요소에 그림자 추가하기</title>
+<style type="text/css">
+/*
+text요소에 그림자 추가하기
+text-shadow : 가로축거리  세로축거리  퍼짐도  색상; 
+*/
+span{
+	font: bold 150px/1.6 verdana;
+	color: coral;
+	margin: 40px;
+}
+span:nth-child(1){
+	text-shadow: 5px 5px 5px	 #333; /*x축 y축 블러(번짐) 색깔  */
+}
+span:last-child{
+	text-shadow: 5px -5px 5px #333;
+}
+
+</style>
+</head>
+<body>
+
+<span>HTML5</span>
+<span>CSS3</span>
+
+</body>
+</html>

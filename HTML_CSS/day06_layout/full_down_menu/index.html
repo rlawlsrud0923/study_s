@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>full down menu</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!--jQuery 사용하기 위한 cdn : 항상 최상위에 놓기-->
+<!-- 
+	jquery-1.10.1.min.js 수정X 띄어쓰기X
+	전체 브라우저 크로스 브라우징 하려면 1버전 사용하기
+	cdn은 내가 만든 js파일 보다 위에 있어야 됨.
+	플러그인도 cdn아래쪽에 위치해야 됨.
+-->
+<script src="js/script.js"></script>
+
+</head>
+<body>
+
+	<header id="main_header">
+		<h1>Fluid</h1>
+	</header>
+
+	<nav id="main_gnb">
+		<ul class="left">
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+		</ul>
+		<ul class="right">
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+		</ul>
+	</nav>
+
+	<!-- Full Down Menu -->
+	<nav id="fullDownMenu" class="fdm_ps">
+		<div class="inner_fdmenu">
+
+			<div class="fdm fdm_1depth">
+				<h2>menu1</h2>
+				<ul class="fdm_sub">
+					<li><a href="#">menu 1-1</a></li>
+					<li><a href="#">menu 1-2</a></li>
+					<li><a href="#">menu 1-3</a></li>
+					<li><a href="#">menu 1-4</a></li>
+					<li><a href="#">menu 1-5</a></li>
+				</ul>
+			</div>
+
+
+			<div class="fdm fdm_1depth">
+				<h2>menu2</h2>
+				<ul class="fdm_sub">
+					<li><a href="#">menu 2-1</a></li>
+					<li><a href="#">menu 2-2</a></li>
+					<li><a href="#">menu 2-3</a></li>
+					<li><a href="#">menu 2-4</a></li>
+					<li><a href="#">menu 2-5</a></li>
+				</ul>
+			</div>
+
+			<div class="fdm fdm_1depth">
+				<h2>menu3</h2>
+				<ul class="fdm_sub">
+					<li><a href="#">menu 3-1</a></li>
+					<li><a href="#">menu 3-2</a></li>
+					<li><a href="#">menu 3-3</a></li>
+					<li><a href="#">menu 3-4</a></li>
+					<li><a href="#">menu 3-5</a></li>
+				</ul>
+			</div>
+
+			<div class="fdm fdm_1depth">
+				<h2>menu4</h2>
+				<ul class="fdm_sub">
+					<li><a href="#">menu 4-1</a></li>
+					<li><a href="#">menu 4-2</a></li>
+					<li><a href="#">menu 4-3</a></li>
+					<li><a href="#">menu 4-4</a></li>
+					<li><a href="#">menu 4-5</a></li>
+				</ul>
+			</div>
+
+			<div class="fdm fdm_1depth">
+				<h2>menu5</h2>
+				<ul class="fdm_sub">
+					<li><a href="#">menu 5-1</a></li>
+					<li><a href="#">menu 5-2</a></li>
+					<li><a href="#">menu 5-3</a></li>
+					<li><a href="#">menu 5-4</a></li>
+					<li><a href="#">menu 5-5</a></li>
+				</ul>
+			</div>
+
+				<div class="fdm fdm_1depth">
+			<h2>menu6</h2>
+			<ul class="fdm_sub">
+				<li><a href="#">menu 6-1</a></li>
+				<li><a href="#">menu 6-2</a></li>
+				<li><a href="#">menu 6-3</a></li>
+				<li><a href="#">menu 6-4</a></li>
+				<li><a href="#">menu 6-5</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	</nav>
+	<!-- //Full Down Menu -->
+
+
+	<div id="wrap">
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+			</ul>
+		</nav>
+
+
+		<div id="content_wrap">
+			<section id="content">
+				<article>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus hendrerit mi, at pretium purus convallis non. Integer semper magna ac mauris hendrerit iaculis ac faucibus turpis. Praesent pharetra sem et nibh auctor auctor adipiscing augue rutrum. Ut sapien quam, bibendum eget malesuada non, porta sed ligula. Donec interdum suscipit mattis. Praesent dictum odio non nisi pharetra pellentesque. Phasellus nec quam sit amet nunc ullamcorper pulvinar nec quis tellus. Pellentesque consectetur tellus ac augue tincidunt luctus. Aenean consectetur, justo vel vestibulum cursus, risus arcu ornare dolor, nec elementum diam erat ac tortor. Morbi eleifend, erat sit amet posuere pretium, purus dui ullamcorper urna, eu rutrum mi augue tristique odio. Proin commodo mi non nibh interdum ultricies. Donec vitae leo quis ante vestibulum accumsan ut sed nulla. Maecenas ligula orci, fringilla ac elementum eget, congue quis dolor. Cras sagittis rhoncus faucibus.</p>
+				</article>
+				<article>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus hendrerit mi, at pretium purus convallis non. Integer semper magna ac mauris hendrerit iaculis ac faucibus turpis. Praesent pharetra sem et nibh auctor auctor adipiscing augue rutrum. Ut sapien quam, bibendum eget malesuada non, porta sed ligula. Donec interdum suscipit mattis. Praesent dictum odio non nisi pharetra pellentesque. Phasellus nec quam sit amet nunc ullamcorper pulvinar nec quis tellus. Pellentesque consectetur tellus ac augue tincidunt luctus. Aenean consectetur, justo vel vestibulum cursus, risus arcu ornare dolor, nec elementum diam erat ac tortor. Morbi eleifend, erat sit amet posuere pretium, purus dui ullamcorper urna, eu rutrum mi augue tristique odio. Proin commodo mi non nibh interdum ultricies. Donec vitae leo quis ante vestibulum accumsan ut sed nulla. Maecenas ligula orci, fringilla ac elementum eget, congue quis dolor. Cras sagittis rhoncus faucibus.</p>
+				</article>
+				<article>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus hendrerit mi, at pretium purus convallis non. Integer semper magna ac mauris hendrerit iaculis ac faucibus turpis. Praesent pharetra sem et nibh auctor auctor adipiscing augue rutrum. Ut sapien quam, bibendum eget malesuada non, porta sed ligula. Donec interdum suscipit mattis. Praesent dictum odio non nisi pharetra pellentesque. Phasellus nec quam sit amet nunc ullamcorper pulvinar nec quis tellus. Pellentesque consectetur tellus ac augue tincidunt luctus. Aenean consectetur, justo vel vestibulum cursus, risus arcu ornare dolor, nec elementum diam erat ac tortor. Morbi eleifend, erat sit amet posuere pretium, purus dui ullamcorper urna, eu rutrum mi augue tristique odio. Proin commodo mi non nibh interdum ultricies. Donec vitae leo quis ante vestibulum accumsan ut sed nulla. Maecenas ligula orci, fringilla ac elementum eget, congue quis dolor. Cras sagittis rhoncus faucibus.</p>
+				</article>
+			</section>
+		</div>
+	</div>
+
+	<footer id="main_footer">
+		<h3>HTML5 + CSS3 Basic</h3>
+		<address>Website Layout Basic . &copy; Love and Peace.</address>
+	</footer>
+</body>
+</html>

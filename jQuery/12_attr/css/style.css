@@ -1,0 +1,74 @@
+
+*{ margin : 0; padding : 0; list-style : none; }
+a { text-decoration:none; color:#fff; }
+
+
+body { background-image:url(../images/bg.jpg); }
+
+ul.kitchen { display:none; }
+
+h1 { text-align:center; margin:30px 0; }
+
+div.bar {
+	width:1000px; height:60px; line-height:60px;
+	margin:0 auto; background:#e58998;
+	border-radius:5px;
+}
+
+div.bar a { padding-left:20px; font-size:12px; display : inline-block; cursor : pointer; }
+
+
+ul { text-align:center; margin:30px 0; }
+
+li {
+	display:inline-block;
+	width:140px; height:140px;
+	margin:0 6px;
+	border:5px solid #fff;
+	border-radius:5px;
+	cursor:pointer;
+}
+
+li img { width:100%; }
+
+li:hover { border-color:#e58998; }
+
+
+div.zoom { 
+	width:1000px; height:600px;
+	background:#fff;
+	margin:0 auto 100px;
+	border-radius:5px; 
+	text-align:center;
+}
+
+
+/*이미지 크게 보이게 하기*/
+div.zoom img { width:100%; }
+
+
+
+/*테스트*/
+button{
+	padding: 20px 40px;
+}
+div.box{
+	width: 300px;
+	height: 442px;
+	border: solid 10px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

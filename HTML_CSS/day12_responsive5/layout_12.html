@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>반응형웹 - Chocolate</title>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="style.css" />
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"	>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes" />
+	</head>
+	<body>
+	<!--
+	- 반응형웹
+	- 미디어쿼리 : 해상도에 맞게 최적화
+	- 뷰포트 : 모바일 타블렛에서도 최적화
+	- box-sizing : padding 과 border 값 박스사이즈에 포함
+	- transition : 마우스 오버시 전환효과
+	- 웹폰트 아이콘 : 아이콘 생성 
+							http://fontawesome.io/Font-Awesome/icons/
+	- 웹폰트 아이콘	<i class="fa fa-camera-retro fa-lg"> </i>			 lg:large사이즈 / 웹폰트 아이콘은 모바일용이므로 데스크탑용에서는 필요없음
+							class: fa-2x, fa-3x, fa-4x, fa-5x, fa-spin
+	- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"	>
+	- 구글 웹 폰트
+	- animation : 박스의 모션
+	- transform : 주메뉴와 텍스트 확대
+	-->
+
+	<div id="cover" class="section">
+		<h1>Chocolate Foods</h1>
+		<a class="mobile-only" id="home"><i class="fa fa-home"></i></a> <!--웹 폰트 아이콘 : 자주 쓰는 아이콘들 따로 정리해놓으면 좋다-->
+		<a class="mobile-only" id="menu"><i class="fa fa-bars"></i></a>
+	</div>
+
+	<div id="content" class="section">
+		<div id="gnb-wrapper">
+            <ul id="gnb">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
+
+	</body>
+</html>

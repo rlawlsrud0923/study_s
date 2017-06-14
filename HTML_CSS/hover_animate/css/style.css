@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+* { margin:0; padding:0; }
+li{ list-style : none; }
+a { text-decoration:none; }
+
+body{ background-color : #ffcce5; }
+
+
+header h1{ 
+	text-align : center;
+	font-size : 50px;
+	margin : 50px 0; 
+}
+
+section ul{ overflow : hidden; width : 700px; margin : 0 auto; }
+
+section ul li{
+	float : left;
+	width : 220px; 
+	height : 220px;
+	margin-right: 20px;
+	margin-bottom: 50px;
+	background-size : cover;
+	border-radius : 100%;
+}
+section ul li:nth-child(3n) {margin-right:0;}
+section ul li:nth-child(1){ background-image : url(../images/puppy_1.jpg); }
+section ul li:nth-child(2){ background-image : url(../images/puppy_2.jpg); }
+section ul li:nth-child(3){ background-image : url(../images/puppy_3.jpg); }
+section ul li:nth-child(4){ background-image : url(../images/puppy_4.jpg); }
+section ul li:nth-child(5){ background-image : url(../images/puppy_5.jpg); }
+section ul li:nth-child(6){ background-image : url(../images/puppy_6.jpg); }
+
+
+
+
+
+
+/*내용 나타나게*/
+
+section ul li .inner{
+	width : 100%; height : 100%;
+	padding-top : 70px;
+	box-sizing : border-box;
+	text-align : center;
+	border-radius : 100%;
+	transform : scale(0);
+	transition : all 1s;
+	color:#fff;
+}
+
+section ul li:hover .inner{
+	transform : scale(1);
+}
+
+
+
+/*안쪽으로 들어가는 원형*/
+
+section ul li{
+	box-shadow : inset 0 0 0 0px rgba(0, 0, 0, 0.5); /* shadow안으로 들어가게 하려면 : inset : 끼워넣다 */
+	transition : all 1s;
+}
+
+section ul li:hover{
+	box-shadow : inset 0 0 0 110px rgba(0, 0, 0, 0.5);
+}

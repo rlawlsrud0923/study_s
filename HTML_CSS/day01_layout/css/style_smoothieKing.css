@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* ctrl+B 미리보기 */
+
+
+/* 초기화 */
+* {margin:0; padding:0;}
+li {list-style:none;}
+a {
+	text-decoration:none;
+	color: #333;
+}
+body{
+	background-image: url(../images/smoothie_heroes.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; /*화면에 고정*/
+	background-position: center center;
+
+	font: 16px/1.5, 'arial'; /* /뒤 = line-height */
+	color: #666;
+}
+
+/* contents */
+.wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+#content{
+	background-color: #FFF;
+	margin-top: 30px;
+	padding: 20px;
+	box-sizing: border-box; /* padding,border를 제외한 사이즈로 나타내 줌 */
+	border: 2px solid #333;
+	border-radius: 15px;
+	position: relative; /*absolute로 띄운 gnb영역 시작점의 기준 잡아주려고 relative줌*/
+	
+	/*overflow: hidden; clearfix 안주고 부모영역 찾고 싶을 때*/
+}
+#content h1{
+	margin-bottom: 20px;
+}
+#content h1 a{
+	font-size: 1.2em;
+	color: #be030c;
+}
+
+
+/* gnb */
+#gnb{
+	background-color:  #be030c;
+	padding: 0 10px;
+	border-radius: 10px;
+	position: absolute;
+	top: 15px; right: 15px;
+
+}
+#gnb li{
+	float: left;
+}
+#gnb li a{
+	display: block;
+	height: 50px;
+	padding: 0 10px;
+	line-height: 50px;
+	color: #FFF;
+	font-weight: bold;
+}
+#gnb li a:hover{
+	text-decoration: underline;
+}
+
+#content p{
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	text-align: justify; /*text 양쪽정렬*/
+}
+#point{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* float 해제시키기 */
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* footer */
+#footer{
+	padding: 5px;
+}
+#footer p{
+	color: #FFF;
+}

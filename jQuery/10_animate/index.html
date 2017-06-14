@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+ <head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>10::animate</title>
+ <script src="jquery-3.1.1.min.js"></script>
+<style type="text/css">
+*{ margin : 0; padding : 0; }
+li{ list-style : none; }
+a{ text-decoration : none; }
+
+body{ background-color : #ddd; }
+
+.box1{
+	width : 100px;
+	height : 100px;
+	background-color : red;
+	position : relative;
+}
+
+.box2{
+	width : 100px;
+	height : 100px;
+	background-color : black;
+	position : relative;
+}
+
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.accor{
+	width: 960px;
+	margin: 100px auto;
+}
+.accor div{
+	float: left;
+	width: 25%;
+	overflow: hidden;
+}
+.blind{
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	/*position으로 띄우면 영역 지정해야 함*/
+	width: 100%;
+	height: 100%; 
+	background-color: #FFF;
+}
+
+.wrap{
+	width: 352px;
+	margin: 100px auto 0;
+	border: solid 10px #000;
+	height: 300px;
+	opacity: 0;
+
+	position: relative;
+	top: 300px;
+}
+.wrap img{
+	position: absolute;
+	left: 0;
+	z-index: 9999; /*txt보다 앞에 위치시키기*/
+}
+.wrap .txt{
+	position: absolute;
+	right: 0;
+	width: 300px;
+	z-index: -9999;
+	padding-top:  70px;
+	padding-right: 20px;
+}
+.wrap .txt h2{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.wrap .txt p{
+	font-size: 12px;
+	line-height: 2em;
+}
+
+.arrow{
+	text-align: center; /*화살표 위치*/
+	opacity: 0;
+}
+.arrow img{
+	cursor: pointer;
+}
+</style>
+
+<script type="text/javascript">
+/*
+	.css('',''); 또는 .css({ '' : '' , '' : '' , '' : '' });
+	.animate({ : , : , : }, 시간);
+	.delay()
+
+	display:	영역X. 애니메이션X
+	opacity:	영역O. 애니메이션O
+*/
+$(function(){
+	$('.box2').delay(1000).animate({'top' : 100},1000);
+
+	//클릭한 div가 커진다.
+	$('.accor div').click(function(){
+		$(this).animate({ 'width' : '70%' });	//클릭한 div너비 70%
+		$(this).siblings('div').animate({ 'width' : '10%' });	//나머지 div너비 10%
+	});
+
+
+	//닫기 클릭하면 화면이 넘어간다
+	$('.close').click(function(){
+		$('.blind').animate({'left' : '-100%'}) //열려있는 브라우저 크기만큼 :  -100%
+	});
+
+
+	//모니터 나타나게 하기
+	$('.wrap').animate({'top' : 0 , 'opacity' : 1}, 1000);
+	$('.wrap').animate({'width': 700}, 1000);
+
+
+	//화살표 나타나게 하기
+	$('.arrow').delay(2000).animate({'opacity' : 1}, 1000);
+
+	//화살표에 닫기 기능 넣기
+	$('.arrow').click(function(){
+		$('.blind').animate({'left' : '-100%'})
+	});
+	
+});
+</script>
+</head>
+<body>
+
+<div class="accor clearfix">
+	<div><img src="images/product01.png" alt="" /></div>
+	<div><img src="images/product02.png" alt="" /></div>
+	<div><img src="images/product03.png" alt="" /></div>
+	<div><img src="images/product04.png" alt="" /></div>
+</div>
+
+<div class="blind">
+	<button class="close">닫기</button>
+
+	<div class="wrap">
+		<img src="images/imac.jpg" alt="" />
+		<div class="txt">
+			<h2>jQuery animation</h2>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+			</p>
+		</div>
+	</div>
+
+	<div class="arrow">
+		<img src="images/pointer.png" alt="" />
+	</div>
+</div>
+
+</body>
+</html>

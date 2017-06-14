@@ -1,0 +1,36 @@
+﻿smoothieKing
+
+ <p>고객 여러분 안녕하십니까?
+스무디킹 코리아㈜ 대표이사 최성재 입니다.
+스무디킹 코리아㈜는 글로벌 No.1 오리지널 스무디 ‘스무디킹’을 
+2003년 2월 한국에 최초로 선보인 스무디 전문 기업입니다.
+스무디는 맛과 영양이 모두 담겨있는 현대인의 건강필수품으로,
+개인의 건강상태를 고려해 과일만으로는 부족한 영양소를 간편하게 선택해 섭취할 수 있습니다.기존 획일화된 건강음료와의 차별화로 한국뿐만 아니라 전세계에서 사랑을 받고 있습니다.
+스무디킹 코리아㈜는 국내 유일한 스무디 브랜드로 한국 스무디 시장을 개척해 이끌어 왔습니다.</p>
+
+<p>
+독자적인 R&D 기술력을 바탕으로 최고 품종의 과일과 영양파우더를 사용해 
+고객이 원하는 다양한 메뉴의 스무디를 선보이며 건강음료의 트렌드를 선도하고 있습니다.
+2016년 1월 신세계푸드의 자회사로 편입된 스무디킹 코리아㈜는
+스무디킹의 장점과 신세계푸드의 노하우를 결합해 베이커리, 주스 등 다양한 메뉴를 선보이고,국내 최대 유통기업인 신세계그룹의 판매채널을 활용해 플래그십 매장 등 
+새로운 플랫폼을 구축하며 가맹점주와 함께 성장하는 상생 프랜차이즈의 대표 모델로 성장해 나가겠습니다.</p>
+
+-------------------------------------------------------------------------------------------
+Tom N Tom
+
+<p>TOM N TOMS is the cultural space and people filled the sensibility with aromatic coffee. 
+We was open the first store in Apgujeong-dong in the beginning of 2001 which is coffee house culture was born and keep pride as local coffee
+shop brand until now. To serve best coffee to our valuable customer, we have established coffee roasting factory, coffee academy and strengthen
+competitiveness for taste and goods quality by make pretzel in the store. 
+shop brand until now. </p>
+<p>Now, TOM N TOMS try to expanding our vison to oversea. We spread our original coffee culture to United States, China, Thailand, Mongolia,
+Australia and other overseas markets. We believe that a cup of coffee has a power of touching people and create a story. 
+We will try our best to be a great space can be friends with a cup of coffee whenever and wherever. Hope you refresh your body and soul in TOM N TOMS.
+Australia and other overseas markets. We believe that a cup of coffee has a power of touching people and create a story. 
+</p>
+
+------------------------------------------------------------------------------------------------
+CupCake
+
+<p>If understood and brewed right, coffee can be your best friend; it will give you a warm, fuzzy feeling that far surpasses any comfort food. Says Rhicha Sinha,head of beverages, Café Coffee Day, “At home, we are used to brewing coffees in the traditional South Indian filters.</p>
+<p>People want to taste coffee in different ways, but not all are aware of the various brewing techniques of preparing this mysterious beverage. It is just a matter of educating people to realise that culinary-wise, coffee is up there in terms of food.” As our fascination and understanding of coffee ascends, experts are looking for new ways to excite and enhance the consumer experience with this intense brown fluid.</p>

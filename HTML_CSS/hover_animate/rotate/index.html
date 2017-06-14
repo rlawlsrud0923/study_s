@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>transform:rotate 회전</title>
+<link rel="stylesheet" href="style.css">
+<style>
+* {margin:0;padding:0;border:0;}
+div {
+	width: 200px; height: 200px;
+	margin: 100px;
+	border:1px solid #000;
+	float:left;
+}
+
+div p{
+	width:100%; height:100%;
+	background:#FF6798;
+	opacity:0.3;
+	animation: ani 2s linear infinite normal;
+	/* infinite : 무한반복*/
+}
+
+@keyframes ani {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+</style>
+
+<body>
+
+<div>
+	<p></p>
+</div>
+<div>
+	<p></p>
+</div>
+<div>
+	<p></p>
+</div>
+
+
+</body>
+</html>

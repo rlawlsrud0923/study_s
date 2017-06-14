@@ -1,0 +1,55 @@
+@chaeset 'utf-8';
+
+*{ margin : 0; padding : 0; }
+li{ list-style : none; }
+a{ text-decoration : none; }
+
+
+.clearfix::after{
+	content : '';
+	display : block;
+	clear : both;
+}
+
+/* 
+	.bxslider li{width : 300px !important;} 
+*/
+
+h1{ text-align :center; }
+
+.dog{
+	width : 800px;
+	margin : 0 auto;
+}
+
+
+.inner{
+	background-color : #ddd;
+}
+.inner .txt{
+	float : left; width : 50%;
+	background : #fff url(../images/bg.jpg) no-repeat center;
+	padding : 50px;
+	box-sizing : border-box;
+}
+.inner .image{
+	float : right; width : 50%;
+	padding : 50px; box-sizing : border-box;
+}
+.inner .image .dog_img{
+	margin-top : 80px;
+}
+.inner .image .dog_img li{
+	width : 32%;  float : left;
+	margin-right : 2%; border : solid 10px #333;
+	border-radius : 100px; box-sizing : border-box; overflow : hidden;
+}
+.inner .image .dog_img li:last-child{
+	margin-right : 0;
+}
+.inner .image .dog_img li img{
+	width : 100%;
+}
+
+
+

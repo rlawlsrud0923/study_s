@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+* { margin:0; padding:0; list-style:none; }
+li{ list-style : none; }
+a{ text-decoration : none; }
+
+
+body{
+	background : beige;
+
+}
+
+.test_menu{
+	background-color : black;
+	color : white;
+	line-height : 50px;
+	text-align : center;
+	width : 100%;
+}
+
+/* 메뉴 고정 */
+.fix{ position : fixed; top : 0; left : 0; }
+
+
+.test_menu a{ 
+	display : inline-block;
+	padding : 0 10px;
+	cursor : pointer;
+}
+
+.test div{
+	height : 800px;
+	font-size : 100px;
+	text-align : center;
+	padding-top : 100px;
+}
+
+.test .test_box1{ background-color : #ddd; }
+.test .test_box2{ background-color : #fff; }
+.test .test_box3{ background-color : #aaa; }
+
+

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>14 :: scroll값 바꾸기</title>
+<script src="jquery-3.1.1.min.js"></script>
+<style type="text/css">
+*{margin: 0; padding: 0; list-style: none;}
+li{list-style: none;}
+a{text-decoration: none;}
+body{
+	background: beige;
+/* 	width: 3000px;
+	height: 3000px; */
+}
+.test div{
+	height: 800px;
+	font-size: 100px;
+	text-align: center;
+	padding-top: 100px;
+}
+.test .test_box1{background-color: #ff9999;}
+.test .test_box2{background-color: #3300cc;}
+.test .test_box3{background-color: #ffcc66;}
+
+
+/* test_menu */
+.test_menu{
+	background: #000;
+	color: #FFF;
+	line-height: 50px;
+	text-align: center;
+}
+.test_menu a{
+	display: inline-block;
+	padding: 0 10px;
+	cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+	//$(window).scrollLeft(500); //scroll위치값을 지정할 수 있다
+
+	/*
+	//a클릭시 해당 위치로 이동
+	$('.test_menu a').eq(0).click(function(){
+		$('html, body').animate({'scrollTop' : 50});
+	});
+	$('.test_menu a').eq(1).click(function(){
+		$('html, body').animate({'scrollTop' : 950});
+	});
+	$('.test_menu a').eq(2).click(function(){
+		$('html, body').animate({'scrollTop' : 1850});
+	});
+	*/
+
+
+
+
+	/*
+		index();		index를 알아낼 수 있다
+		offset().top	좌표값을 찾는 메서드
+
+		1. a를 클릭											click
+		2. 클릭한 a의 index 확인							index
+		3. 같은 순서의 test_box의 좌표값을 확인		eq, offset().top
+		4. animate로 해당 좌표로 이동					animate
+	*/
+	
+		
+
+	//1. 메뉴 a 클릭
+	$('.test_menu a').click(function(){
+
+		//2. a태그의 index를 확인한다
+		var menuIndex = $(this).index(); //0 1 2
+		console.log(menuIndex);
+
+		//3. 클릭한 a태그와 동일한 순서의 박스 위치값 알아내기
+		var boxPosition = $('.test div').eq(menuIndex).offset().top;
+		console.log(boxPosition);
+
+		//4. 해당 좌표로 이동하기
+		$('html, body').animate({'scrollTop' : boxPosition}, 1000);
+
+	});
+
+
+
+
+});
+</script>
+</head>
+<body>
+
+<div class="test_menu">
+	<a>menu1</a>
+	<a>menu2</a>
+	<a>menu3</a>
+</div>
+
+<div class="test">
+	<div class="test_box1">box1</div>
+	<div class="test_box2">box2</div>
+	<div class="test_box3">box3</div>
+</div>
+
+</body>
+</html>

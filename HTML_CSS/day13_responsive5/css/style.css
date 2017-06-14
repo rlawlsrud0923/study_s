@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {margin:0;padding:0;}
+li {list-style:none;}
+a {
+	text-decoration:none;
+	color:#fff;
+}
+
+html,body {
+	width:100%; height:100%;
+}
+
+/* float해제 .clearfix */
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+/* left-section */
+#wrapper {
+	height: 100%;
+}
+div {
+	position: relative;
+}
+div img{
+	position: absolute;
+	left: 30px;
+	bottom: 10px;
+	width: 200px;
+}
+#wrapper #left-section {
+	float: left;
+	width: 55%; height: 100%;
+	background: url(../images/phto2.jpg) center center no-repeat;
+	background-size: cover;
+}
+#wrapper #left-section h1 > a{
+	display: block;
+	width: 300px; height: 97px;
+	text-indent: -9999px; /*text는 뒤로 숨기기*/
+	background: url(../images/logo2.png) 0 0 no-repeat;
+	position: absolute;
+	top:50px; left:50px;
+}
+#wrapper #left-section #innerBox > img{
+	width: 56%;
+	position: absolute;
+	top: 140px; right: 0;
+	left: auto; /*auto= position의 수치를 초기화*/
+}
+
+
+
+
+
+
+/* right-section */
+#wrapper #right-section {
+	float:left;
+	width:45%; height:100%;
+	background-color:#999;
+}
+#wrapper #right-section #con{
+	height: 30%;
+	background: #5a6a21 url(../images/con1_on.jpg) no-repeat bottom;
+	background-size: cover;
+}
+#wrapper #right-section #con ul{
+	padding-top: 50px;
+	text-align: center;
+	font-size: 28px;
+	transition: all 0.5s;
+	opacity: 0;
+}
+
+#wrapper #right-section #con ul:hover{
+	opacity: 1;
+}
+#wrapper #right-section #con ul li a:hover{
+	text-decoration: underline;
+}
+
+
+
+/* con-story */
+#wrapper #right-section #con-story{
+	height: 50%;
+	background-color: #666;
+}
+
+
+#wrapper #right-section #con-story #story1{
+	float: left;
+	width: 55%; height: 100%;
+	background-color:#555;
+	background: #fac035 url(../images/con2.png) no-repeat center;
+	background-size: 70%;
+	transition: all 1s;
+}
+#wrapper #right-section #con-story #story1:hover{
+	background-size: 100%;
+}
+
+
+
+
+
+/* story 2 */
+#wrapper #right-section #con-story #story2{
+	float: left;
+	width: 45%; height: 100%;
+	background-color:#444;
+}
+
+
+/* date 1 */
+#wrapper #right-section #con-story #story2 #date1{
+	height: 50%;
+	background: #d95548;
+	background-size: 80%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+#wrapper #right-section #con-story #date1 #date1-inner{
+	width: 100%; height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0.8);
+	opacity: 0;
+	transform: scale(0);
+	transition: all 1s;
+}
+#wrapper #right-section #con-story #date1:hover #date1-inner {
+	opacity: 1;
+	transform: scale(1);
+}
+#date1 #date1-inner p{
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+	border: 1px solid #FFF;
+
+	position: relative;
+	top: 50%;
+	margin-top: -15px;
+}
+
+
+/* date 2 */
+#wrapper #right-section #con-story #story2 #date2{
+	height: 50%;
+	background: #286371 url(../images/con4.png) center no-repeat;
+	background-size: 60%;
+	transition: all 1s;
+}
+#wrapper #right-section #con-story #story2 #date2:hover{
+	background-size: 100%;	
+}
+
+
+
+/* event */
+#wrapper #right-section #event{
+	height: 20%; /* 100% - 30% - 50% = 20% */
+	background-color: #222;
+}
+#wrapper #right-section #event {
+	height: 20%;
+	background: #8e6a98 url(../images/con5.png);
+	background-size: cover;
+	transition: all 0.5s;
+}
+#wrapper #right-section #event:hover{
+	background-image: url(../images/con5_on.jpg);
+	background-size: cover;
+}
+#wrapper #right-section #event img{
+	transition: all 1s;
+}
+#wrapper #right-section #event img:hover{
+	left: 200px;
+}
+
+
+
+#con,#story1,#date1,#date2,#event{
+	animation: open 1s 1; /*ani open이 1s당 1번만 반복*/
+	transition: all 1s;
+}
+
+@keyframes open{
+	0%{transform: scale(0)}
+	100%{transfrom: scale(1)}
+}
+
+
+
+
+/* mobile */
+@media screen and (max-width: 600px){ /*최대 600px까지*/
+	#wrapper #left-section {
+		float: none;
+		width: 100%; height: 5%;
+		position: fixed; /*screen에 고정하기 때문에 디바이스 사이즈에 맞게 보인다*/
+		top: 0; left: 0;
+		z-index: 10;
+	}
+	#wrapper #left-section h1 > a{
+		width: 100%; height: 100%;
+		text-indent: 10px; /*text는 뒤로 숨기기*/
+		background: none;
+		position: absolute;
+		top: 5px; left :10px;
+		font-size: 28px;
+	}
+	#wrapper #left-section #innerBox > img{
+		display: none;
+	}
+
+	
+	/* right-section */
+	#wrapper #right-section {
+		float: none;
+		width: 100%; height: 100%;
+		background-color:#999;
+	}
+	#wrapper #right-section #con{
+		height: 40%;
+	}
+	#wrapper #right-section #con ul{
+		padding-top: 80px;
+	}
+	#wrapper #right-section #event{
+		height: 10%;
+	}
+	#wrapper #right-section #event:hover img{
+		left: 120px;
+	}
+	#wrapper #right-section #con-story #story1{
+		float: none;
+		width: 100%; height: 30%;
+		background: #fac035 url(../images/con2.png) no-repeat right center;
+		background-size: 20%;
+		transition: all 1s;
+	}
+	#wrapper #right-section #con-story #story1:hover{
+		background-size: 40%;
+	}
+
+
+
+	#wrapper #right-section #con-story #story2{
+		float: left;
+		width: 100%; height: 70%; /*story1의 h값이 30%니까*/
+	}
+	#wrapper #right-section #con-story #story2 #date1{
+		height: 50%;
+	}
+	#wrapper #right-section #con-story #story2 #date1 img{
+		transition: all 0.4s;
+	}
+	#wrapper #right-section #con-story #story2 #date1:hover img{
+		opacity: 0;
+	}
+
+	#wrapper #right-section #con-story #story2 #date2{
+		height: 50%;
+		background: #286371 url(../images/con4.png) center no-repeat;
+		background-size: 40%;
+	}
+	#wrapper #right-section #con-story #story2 #date2:hover{
+		background-size: 50%;
+	}
+}

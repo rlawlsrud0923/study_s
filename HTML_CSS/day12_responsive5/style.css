@@ -1,0 +1,198 @@
+@import url(http://fonts.googleapis.com/css?family=Allura);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
+
+html, body {
+	width: 100%; height: 100%;
+	/*100%로 꼭 해줘야 됨*/
+}
+body { overflow: hidden; }
+html, body, h1, ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: #e8deed;
+}
+
+.mobile-only {
+	display: none;
+}
+
+#cover {
+	float: left;
+	width: 50%; height: 100%; /* %로 사이즈를 줘야 가변적인 사이트를 만들 수 있음 */
+	background-image: url(./images/godiva3.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative; /* #cover에 기준점을 잡아주기 */
+}
+
+#cover:before {
+	content: '';
+	display: block;
+	width: 100%; height: 100%;
+	background-image: url(./images/shadow.png);
+}
+
+#cover h1 {
+	width: 300px; height: 300px;
+	border-radius: 100%;
+	background-color: rgba(25,5,0,0.9);
+	
+	margin-left: -150px; 	margin-top: -150px; /*자기 몸크기에 반 이동*/
+
+	position: absolute;
+	left: 50%; top: 50%; /*정중앙에 배치*/
+
+	text-align: center;
+	line-height: 300px; /*line-h값 = h값 : 가운데 배치*/
+	
+	color: #B4B4B4;
+	font-family: 'Playball', 'cursive';
+}
+
+#content {
+	float: left;
+	width: 50%; height: 100%;
+	background-color: #190500;
+	text-align: center;
+}
+#content #gnb-wrapper, #content #gnb {
+	height: 100%;
+}
+
+#content #gnb li {
+	height: 33.3333%; /*높이를 33.3333%로 3등분*/
+	border-bottom: solid 1px #fff;
+	box-sizing: border-box; /*border로 box가 늘어나지 않도록 해주기*/
+	
+	overflow: hidden;
+}
+
+#content #gnb li a {
+	color: #505050;
+	display: block;
+	font-size: 2em;
+	height: 500px;
+	line-height:500px;
+
+	position: relative;
+	top: 50%;
+
+	margin-top: -250px; /*중앙배치*/
+	/* transition: letter-spacing 1s, text-indent 1s; */
+	transition: all 1s;
+	
+}
+
+#content #gnb li a:hover{
+	text-indent: 40px; /*들여쓰기*/
+	letter-spacing: 40px; /*자간*/
+	background-color: #13060D;
+}
+
+
+
+/* tablet */
+@media only screen and (max-width:768px) { /*미디어가 스크린에만 적용된다 최대값 768px일 때에만 적용된다*/
+	
+	#cover, #content {
+		width:100%; /*각각 w50%였는데 100%가 됨*/
+		float: none;
+	}
+	#cover {
+		height: 80%;
+	}
+	#content {
+		height: 20%;
+	}
+	#content #gnb li {
+		width: 33.3333%; /*w를 33.3333%로 3등분 시키기*/
+		height: 100%;
+		float: left; /*가로로 나열시키기*/
+
+		border-bottom: 0;
+		border-right: 1px solid #090200;
+	}
+	#content #gnb li a:hover{
+	text-indent: 20px;
+	letter-spacing: 20px;
+	}
+}
+
+
+
+
+/* mobile */
+@media only screen and (max-width:400px) {
+	
+	.mobile-only {
+		display: block; /*display none이었던거 바꿔주기*/
+		position: fixed;
+		top: 0; left: 0;
+
+		width: 70px; height: 70px; /*정사각형 사이즈로 바꿔주기*/
+
+		color: #B4B4B4;
+		text-align: center;
+		line-height: 70px;
+		font-size: 2em;
+	}
+	
+	
+	#menu {
+		left: auto;
+		right: 0;
+	}
+
+	#cover h1 {
+		width: 100%;
+		height: 70px;
+		border-radius: 0; /*원 없애기*/
+		
+		background-color: rgba(0,0,0,0.8);
+		
+		margin: 0;
+		
+		position: fixed; /*상단에 고정시키기*/
+		left: 0; top: 0;
+
+		line-height: 70px;
+		
+		font-size: 1.2em;
+		color: #fff;
+		font-family: 'arial' ;
+}
+
+	#cover {
+		height: 100%;
+	}
+	#content {
+		height: auto;
+		position: fixed;
+		top: 70px;
+	}
+	#content #gnb li {
+		float: none;
+		width: 100%; height: 50px;
+		line-height: 50px;
+		border-bottom: solid 1px #000;
+		color: #fff;
+	}
+
+	#content #gnb li a {
+		font-size: 1.1em;
+		font-weight: bold;
+	}
+
+	#content #gnb li a:hover{
+	text-indent: 0px;
+	letter-spacing: 0px;
+	}
+}

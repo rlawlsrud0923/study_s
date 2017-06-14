@@ -1,0 +1,44 @@
+
+* { margin:0; padding:0; list-style:none; }
+
+div.container { width:780px; margin:50px auto; }
+
+body { background-image:url(../images/bg.png); }
+
+h1 { text-align:center; margin:50px 0; }
+
+ul.sunban {
+
+	height:150px;
+	background-image:url(../images/sunban.png);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	margin-bottom:50px;
+}
+
+ul.sunban li {
+
+	width:130px; height:130px;
+	float:left;
+	cursor:pointer;
+}
+
+div.cart {
+
+	width:128px; height:128px;
+	background-image:url(../images/cart.png);
+	margin:0 auto;
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+

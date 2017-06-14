@@ -1,0 +1,112 @@
+@charset="utf-8";
+
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: #ebca3f;}
+
+
+body{
+	background-color: #ffd600;
+	font-familly: 'arial';
+}
+
+
+
+
+/* header */
+#header{
+	background-color: #FFF;
+	height: 250px;
+	line-height: 200px; /*h가운데정렬*/
+	color: #FFF;
+	text-align: center;
+	white-space: nowrap; /*줄바꿈 방지 속성 : width값 줄여도 text 아래로 떨어지지 않게 해줌*/
+	overflow: hidden; /*header의 h값이 정해져 있기 때문에 hidden 해주면 img와 text 모두 가져준다*/
+}
+h1{
+	font-family: "Droid Sans", sans-serif; /*Droid+sans의 +는 공백으로 처리한다*/
+	font-size: 240px;
+	letter-spacing: -3px;
+	color: #ebca3f;
+}
+#main_logo{
+	width: 300px;
+	position: relative;
+	top: -130px;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+
+/* gnb */
+#gnb_wrapper{
+	padding: 50px 0;
+	text-align: center;
+}
+#gnb{
+	display: inline-block;
+	padding: 0 30px;
+	background-color: #FFF;
+	border-radius: 30px;
+	border-bottom: 3px solid #FFF;
+}
+#gnb a{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px;
+	color: #000;
+	border-bottom: 3px solid #FFF;
+	border-left: 3px solid #FFF;
+	border-right: 3px solid #FFF;
+}
+#gnb li{
+	float: left;
+}
+#gnb li a:hover{
+	border-bottom: 3px solid #ffd600;
+}
+
+
+
+/* content-list */
+#sell-list{
+	width: 980px;
+	margin: 0 auto 50px;
+}
+#sell-list li{
+	float: left;
+	width: 200px; height: 200px;
+	background: #FFF;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	position: relative;
+}
+#sell-list li span{
+	padding: 10px 20px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	border-top-left-radius: 20px; /*왼쪽상단만 둥글게*/
+	/*border-radius: 20px 0 0 0;*/
+	background-color: rgba(255,255,255,0.4);
+	color: #000;
+
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+#sell-list li.best-product{
+	width: 440px;
+	height: 440px;
+}
+#sell-list li.best-product img.tag{
+	position: absolute;
+	top: -10px;
+	left: -10px;
+}

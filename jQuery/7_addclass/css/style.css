@@ -1,0 +1,60 @@
+* { margin:0; padding:0; }
+
+
+body { text-align:center; }
+
+h1  { margin-top:150px; }
+
+div.slide { margin:50px 0; }
+
+/* div.slide img { opacity:0.5; }
+ */
+
+
+.box{
+	width: 300px;
+	height: 100px;
+	border: 5px #000 solid;
+	margin: 20px auto;
+}
+.add{
+	background-color: #F00;
+}
+
+
+
+
+.box2{
+	width: 640px;
+	height: 360px;
+	background-image: url(../images/aven2.jpg);
+}
+/* 이미지를 가리는 클래스 */
+.hide{
+	opacity: 0;
+}
+
+
+.test{
+	background-color: #ddd;
+	padding: 50px 0;
+}
+.test li{
+	width: 100px;
+	height: 100px;
+	border: solid 10px black;
+}
+.test li.color{
+	background-color: #F00;
+}
+/*
+	:before			=			.prepend();
+	:after				=			.append();
+*/
+
+/* .test:before{
+	content: '★';
+}
+.test:after{
+	content: '★';
+} */

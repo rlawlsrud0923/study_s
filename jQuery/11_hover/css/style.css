@@ -1,0 +1,101 @@
+@charset "utf-8";
+*{ margin : 0; padding : 0; }
+li{ list-style : none; }
+a{ text-decoration : none; }
+
+img{ vertical-align : bottom; }
+/* 
+	이미지 아래 여백 없애기 
+	top, middle.......
+*/
+
+.clearfix::after{ 
+	content : ''; 
+	display : block; 
+	clear : both; 
+}
+
+
+
+button{
+	padding : 20px 40px;
+	margin: 30px;
+}
+
+body{ text-align : center; }
+
+.test li{
+	display : inline-block;
+	width : 100px; 
+	height : 100px;
+	margin : 20px;
+	
+	/* 기능을 위한 스타일 */
+	opacity : 0;
+}
+
+.test li:nth-child(1){ background-color : #261771; }
+.test li:nth-child(2){ background-color : #0695D7; }
+.test li:nth-child(3){ background-color : #F5F107; }
+.test li:nth-child(4){ background-color : #D8251E; }
+.test li:nth-child(5){ background-color : #000000; }
+
+
+.wrap{
+	background-image : url(../images/bg02.jpg);
+}
+
+.inner{
+	width :  1360px;
+	margin : 0 auto;
+}
+
+.monster{
+	height : 680px;
+}
+.monster > div{
+	float : left;
+	
+	display : none;
+	margin : 20px;
+	width : 300px;
+}
+
+.monster > div img{
+	transform : scale(0.5);
+	border-radius : 50%;
+	opacity : 0.5;
+	transition : all 1s;
+}
+
+.big{ 
+	opacity : 1 !important;
+	transform : scale(1) !important;
+}
+
+
+
+*{outline: 1px #0f0 solid;}
+/* wrap2 */
+.wrap2{
+	width: 870px;
+	margin: 0 auto;
+}
+.wrap2 div{
+	float: left;
+	width: 250px;
+	height: 280px;
+	background-color: #FFF;
+	overflow: hidden;
+	margin: 20px;
+
+	position: relative;
+}
+.wrap2 div h2{
+	line-height: 280px;
+}
+.wrap2 div img{
+	position: absolute;
+	top: 280px; /*div H값만큼 밑으로 내려서 숨겨주기*/
+	left: 0;
+}

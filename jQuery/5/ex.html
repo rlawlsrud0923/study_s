@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>5일차 :: 예제</title>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script><!--제이쿼리 라이브러리-->
+<style type="text/css">
+body{
+	background: url(images/bg.jpg);
+	text-align: center;
+	background-size: cover; /*html,body에 높이를 100%줘야 끊기지 않고 화면에 맞게 사이즈 조정됨*/
+}
+/* 화면 전체 배경 */
+html,body{height: 100%;}
+
+h1{margin: 50px 0;}
+ul li{
+	display: inline-block;
+	margin: 20px;
+	position: relative;
+}
+li{list-style: none;}
+ul li button{
+	background-color: #FFF;
+	border: none;
+	width: 20px; height: 20px;
+	border-radius: 100%;
+	position: absolute;
+	right: 0; top: 0;
+	display: none;
+}
+ul li:hover button{
+	display : block;
+}
+
+</style>
+<script type="text/javascript">
+$(function(){
+	$('ul li button').click(function(){
+		$(this).parent().prev('li').fadeOut();
+		$(this).parent().next('li').fadeOut();
+	});
+});
+
+/*
+	.children();	자식
+	.siblings();	형제
+	.farent();		부모
+	.farents();		상위
+	.find();			하위
+
+	.next();		다음
+	.prev();		이전
+*/
+</script>
+</head>
+<body>
+
+<h1><img src="images/logo.png" alt="" /></h1>
+<ul>
+	<li>
+		<img src="images/apple_01.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_02.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_03.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_04.png" alt="" />
+		<button>x</button>
+	</li>
+		<li>
+		<img src="images/apple_05.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_06.png" alt="" />
+		<button>x</button>
+	</li>
+		<li>
+		<img src="images/apple_07.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_08.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_09.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_10.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_11.png" alt="" />
+		<button>x</button>
+	</li>
+	<li>
+		<img src="images/apple_12.png" alt="" />
+		<button>x</button>
+	</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+body {
+	font-family:'helvetica',sans-serif;
+}
+
+/* header */
+header {
+	height:60px;
+	background-color:#1d4088;
+	color:white;
+	line-height:60px;	
+}
+header h1 {
+	text-indent:20px;
+}
+
+
+#main_gnb {
+	height:40px;
+	border-bottom:1px solid black;
+	background-color:#32394a;
+}
+#main_gnb ul.left {
+	float:left;
+}
+#main_gnb ul.right {
+	float:right;
+}
+
+#main_gnb ul.left > li {
+	float:left;
+}
+#main_gnb ul.right > li {
+	float:left;
+}
+#main_gnb a {
+	display:block;
+	padding:10px 20px;
+	color:white;
+	border-left:1px solid #5f6673;
+	border-right:1px solid #242a37;
+	font-weight:bold;
+}
+
+
+body {
+	min-width:760px;
+}
+#wrap {
+	overflow:hidden;
+	background-color:#71b1d1;
+}
+#wrap > #main_lnb {
+	float:left;
+	width:200px;
+}
+#wrap > #content_wrap {
+	float:left;
+	width:100%;
+	margin-right:-200px;
+}
+section#content {
+	padding-right:200px;
+	background-color:white;
+	border-left:1px solid black;
+}
+section#content article {
+	padding:10px;
+}
+
+#main_lnb > ul > li > a {
+	display:block;
+	height: 40px;
+	line-height:40px;
+	padding-left:15px;
+	border-top:1px solid #96d6f6;
+	border-bottom:1px solid #6298b2;
+	color:#fff;
+	font-weight:bold;
+}
+
+/* footer */
+footer#main_footer {
+	text-align:center;
+	border-top:3px solid black;
+	padding:10px 0;
+}
+
+
+/* full down menu */
+#fullDownMenu{
+	background-color: #FFF;
+	width: 100%; /*w값 full*/ 
+	padding-bottom: 20px;
+	border: 1px solid #dedede;
+
+	/*위치 잡기*/
+	position: absolute; /* 기준은 부모인 Body */
+	top: 100px; left: 0; /* header(60px) + #main_lnb(40px) */
+	z-index: 10; /*제일 위에 배치*/
+}
+.fdm_1depth{
+	float: left;
+	padding: 20px 15px 20px 20px;
+	font-size: 14px;
+}
+.fdm_1depth h2{
+	font-size: 16px;
+	text-align: center;
+}
+
+.inner_fdmenu{
+	min-width: 760px; /*w값 줄였을 때 메뉴 아래로 안떨어지게 해주기*/
+	overflow: hidden;
+
+	/* 다중 이미지 */
+	background: url(../images/Business3.jpg),url(../images/Business.png);
+	background-repeat: no-repeat;
+	background-position: 550px 0, 100% 20px;
+	background-size: contain;.
+
+}

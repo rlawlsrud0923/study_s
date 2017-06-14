@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+ <head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title> box-sizing: border-box 속성 </title>
+<style type="text/css">
+/*
+	{ box-sizing: border-box 속성 } : 
+	margin, padding, border의 값을 계산하지 않아도 브라우저가 이 값들을 실제 div의 박스 사이즈값에 포함하지 않습니다.
+*/
+*{margin: 0; padding: 0;}
+
+div.container{
+    width: 30em;
+    border: 1em solid;
+	overflow: hidden;
+}
+div.box{
+	width: 50%; height: 50px;
+	border: 1em solid #F00;
+	float: left;
+	
+	box-sizing: border-box;
+}
+.left{
+	background: #FF0;
+}
+.right{
+	background: #0FF;
+}
+</style>
+</head>
+ <body>
+<div class="container">
+	<div class="box left">LEFT</div>
+	<div class="box right">RIGHT</div>
+</div>
+</body>
+</html>

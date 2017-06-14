@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+img{
+	vertical-align: bottom;
+}
+body{
+	background-color: #656361;
+	font-family: arial, sans-serif;
+	color: #999;
+	font-size: 16px;
+}
+
+
+/* header */
+#header{
+	height: 400px;
+
+	background-image: url(../images/insideOut2_bg2.png);
+	background-position: 0 0;
+	background-repeat: repeat-x;
+}
+#header a#logo{
+	display: block;
+	height: 50px;
+	color: #FFF;
+	font-family: 'Freckle Face', cursive; /* font-family: 띄어쓰기로 폰트 여러개 적용시킬 수 있음 */
+	font-size: 2em;
+	line-height: 2;
+}
+
+
+/* 가운데정렬 */
+.wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+#header_inner{
+	height: 100%;
+	background: url(../images/insideOut2_bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+#moviescroll {
+	height:110px;
+	background-image:url(../images/insideOut_slide.png);
+	background-size:contain;
+}
+
+/* list_wrapper */
+#list_wrapper{
+	padding: 100px 0;
+}
+#movie_list{
+	width: 990px;
+}
+#movie_list > li:before{
+	content: "X";
+	display: block;
+	width: 30px; height: 30px;
+	line-height: 30px;
+	background-color: #656361;
+	border-radius: 50%;
+	border: 5px solid #fff;
+	color: #FFF;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+
+	position: absolute; /*li에 relative를 줘서 기준점을 잡아줘야 li 옆에 붙음*/
+	top: -5px; left: -10px;
+}
+
+#movie_list > li{
+	position: relative;
+	float: left;
+	width: 300px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	background-color: #222;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+	text-align: center;
+}
+#movie_list > li h3{
+	height: 50px;
+	line-height: 50px; /*50px안에서 수직으로 정렬됨*/
+	border-bottom: 3px solid #656361;
+	text-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+}
+#movie_list > li p{
+	padding: 20px;
+	line-height: 24px;
+}
+#movie_list > li .icon_box{
+	display: inline-block; /*요소는 inline / 내부는 block*/
+	border-top: 1px solid #656361;
+}
+#movie_list > li .icon_box li{
+	float: left;
+}
+#movie_list > li .icon_box li a{
+	display: block;
+	width: 50px; height: 50px;
+	background-image: url(../images/sprite-btn.png);
+	text-indent: -9999px;
+	/*	a태그 접근성때문에 text 항상 있어야 됨.
+		a태그에 icon이미지 줬을 경우 text에 text-indent: -9999px 줘서 왼쪽으로 보내버리기 */
+}
+#movie_list > li .icon_box li a.view{
+	background-position: left;
+}
+#movie_list > li .icon_box li a.like{
+	background-position: center;
+}
+#movie_list > li .icon_box li a.share{
+	background-position: right;
+}
+#movie_list > li .icon_box li a:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+
+/* footer */
+#footer{
+	background-color: #222;
+	border-top: 1px solid #666;
+}
+#footer #footer_inner{
+	padding:30px;
+	color:#666;
+}

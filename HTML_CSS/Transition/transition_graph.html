@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Transition Graph 예제</title>
+<style type="text/css">
+*{margin: 0; padding: 0;}
+.graph{width: 610px; border: 1px solid black;}
+.bar{
+	width: 100px; height: 50px;
+	margin: 5px;
+	background-color: #eb5229;
+}
+.bar:nth-child(2) {background: #ff3c6a;}
+.bar:nth-child(3) {background: #2bb9e2;}
+.bar:nth-child(4) {background: #74ca4a;}
+.bar:nth-child(5) {background: #532dbf;}
+
+.graph .bar{ /* 원본에 transition주면 mouse leave 될 때에도 애니메이션 적용됨 */
+	transition-duration: 2s;
+}
+.graph .bar:hover{ /* 각각의 bar에 hover 시키기*/
+	width: 600px;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS3 Transition Graph</h1>
+<div class="graph">
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+</div>
+
+</body>
+</html>

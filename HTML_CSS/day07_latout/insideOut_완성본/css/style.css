@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* 초기화 */
+body, ul, h1, h3, p {
+	margin:0;
+	padding:0;
+	font-family:Cabin,arial,sans-serif;
+}
+li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+img {
+	border:0;
+	vertical-align:bottom;
+}
+.clearfix:after {
+	display:block;
+	content:'';
+	clear:both;
+	visibility:hidden;
+	height:0;
+}
+
+/* content */
+body {
+	background-color:#656361;
+	color:#999;
+	font-size:16px;
+}
+.wrapper {
+	width:960px;
+	margin:0 auto;
+}
+#header {
+	height:400px;
+	background-image:url(../images/insideOut2_bg2.png);
+	background-position: 0 0;
+	background-repeat:repeat-x;
+}
+#header #header-inner {
+	height:100%;
+	background-image:url(../images/insideOut2_bg.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+#header #header-inner a#logo {
+	display:block;
+	width:280px;
+	height:50px;
+	color:#fff;
+	font-size:2em;
+	font-family:Freckle Face, cursive,serif;
+	line-height:150px;
+	text-shadow:0px 5px 5px rgba(255,255,255,0.5);
+}
+#movie-scroll {
+	height:110px;
+	background-image:url(../images/insideOut_slide.png);
+	background-size:contain;
+}
+#movie-list-wrapper {
+	padding:100px 0;
+}
+#movie-list {
+	width:990px;
+}
+#movie-list > li:before {
+	content:'X';
+	display:block;
+	width:30px;
+	height:30px;
+	color:#fff;
+	line-height:30px;
+	background-color:#656361;
+	border-radius:50%;
+	border:5px solid #fff;
+	box-shadow:5px 5px 15px rgba(0,0,0,0.8);
+	position:absolute;
+	top:-5px;
+	left:-10px;
+}
+#movie-list > li {
+	position:relative;
+	float:left;
+	width:300px;
+	margin-right:30px;
+	margin-bottom:30px;
+	background-color:#222;
+	border-top-left-radius:50px;
+	border-bottom-right-radius:50px;
+	box-shadow:5px 5px 15px rgba(0,0,0,0.4);
+	text-align:center;
+}
+#movie-list h3 {
+	height:50px;
+	line-height:50px;
+	border-bottom:3px solid #656361;
+	text-shadow:10px 10px 15px rgba(0,0,0,0.8);
+}
+#movie-list p {
+	padding:20px;
+	line-height:24px;
+}
+#movie-list li > ul {
+	display:inline-block;
+	border-top:1px solid #4b4e43;
+}
+#movie-list li > ul > li {
+	float:left;
+}
+#movie-list li > ul > li a {
+	display:block;
+	width:50px;
+	height:50px;
+	text-indent:-99999px;
+	background-image:url(../images/sprite-btn.png);
+}
+#movie-list li > ul > li a:hover {
+	background-color:rgba(0,0,0,0.2);
+}
+#movie-list li > ul > li a.view {
+	background-position:left;
+}
+#movie-list li > ul > li a.like {
+	background-position:center;
+}
+#movie-list li > ul > li a.share {
+	background-position:right;
+}
+#footer {
+	background-color:#222;
+	border-top:1px solid #666;
+}
+#footer p#footer-inner {
+	padding:30px;
+	color:#666;
+}

@@ -1,0 +1,72 @@
+@chaeset 'utf-8';
+
+*{ margin : 0; padding : 0; }
+li{ list-style : none; }
+a{ text-decoration : none; }
+
+
+.clearfix::after{
+	content : '';
+	display : block;
+	clear : both;
+}
+
+.section1{
+	background-image: url(../images/bg01.jpg);
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
+
+.slide1{background-color: ##df2bdf;}
+.slide2{background-color: #15c7aa;}
+.slide3{background-color: #ff7519;}
+
+
+
+/*세모 만들기*/
+.test{
+	width: 0; height: 0;
+	border: solid 30px transparent;
+	/*border-top-color: #F00;*/
+	/*border-left-color: #00F;*/
+	border-right-color: #0F0;
+}
+
+
+.section3{
+	text-align: center;
+}
+.section3 .product{
+	width: 90%;
+	margin: 0 auto;
+}
+.section3 .product li{
+	float: left;
+	width: 20%;
+	background-color: #FFF;
+	border-radius: 20px;
+	padding: 20px;
+	box-sizing: border-box;
+
+	position: relative;
+	top: 100px;
+	opacity: 0;
+}
+.section3 .product li img{
+	width: 100%;
+}
+
+
+
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000;
+	text-align: center;
+	z-index: 9999
+}
+.header a{color: #FFF;}

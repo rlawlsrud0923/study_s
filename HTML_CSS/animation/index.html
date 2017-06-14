@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>animation and keyframes</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!--
+animation 속성
+transition 속성을 활용한 마우스 오버 시에 모션 효과를 구현
+
+animation과 keyframes라는 속성을 통해 설정값에 의해 자동으로 움직이는 모션으로 동작.
+
+@keyframes 모션이름 {
+      0% { 모션 시작점의 css 설정 }
+      100% { 모션 끝점의 css 설정 }
+}
+
+{ animation : 모션이름호출   시간   가속도   지연시간  반복횟수  방향지정; }
+
+@keyframes ani {
+
+      0% { transform:rotate(0deg); }
+      100% { transform:rotate(360deg); }
+}
+
+div {width:300px;height:300px;background:blue;margin:100px;animation:ani 2s linear 3 normal;} 
+-->
+
+<div id="wrap">
+	<header>
+		<a id="logo" href="#">macaroon</a>
+	</header>
+	
+	<hgroup id="title"> <!--h태그만 묶을 수 있음-->
+		<h1>Pistachio Rose</h1>
+		<h2>Coconut CHocolate</h2>
+	</hgroup>
+
+	<div id="ani1">
+		<img src="images/macalong1.png" alt="" />
+	</div>
+	
+	<div id="ani2">
+		<img src="images/macalong2.png" alt="" />
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* ctrl+B 미리보기 */
+
+
+/* 초기화 */
+* {
+	margin:0; padding:0;
+	/*outline:1px solid #00f;*/
+}
+li {list-style:none;}
+a {
+	text-decoration:none;
+	color: #333;
+}
+body{
+	background-image: url(../images/cupcake_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; /*화면에 고정*/
+	background-position: center center;
+
+	font: 16px/1.5, 'arial'; /* /뒤 = line-height */
+	color: #666;
+}
+
+/* contents */
+.wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+#content{
+	background-color: #FFF;
+	margin-top: 30px;
+	padding: 20px;
+	box-sizing: border-box; /* padding,border를 제외한 사이즈로 나타내 줌 */
+	border: 2px solid #7a4f49;
+	border-radius: 15px;
+	position: relative; /*absolute로 띄운 gnb영역 시작점의 기준 잡아주려고 relative줌*/
+
+	/*overflow: hidden; clearfix 안주고 부모영역 찾고 싶을 때*/
+}
+#content h1{
+	margin-bottom: 20px;
+}
+#content h1 a{
+	font-size: 1.2em;
+	color: #000;
+}
+
+
+/* gnb */
+#gnb{
+	background-color:  #889137;
+	padding: 0 10px;
+	border-radius: 10px;
+	position: absolute;
+	top: 15px; right: 15px;
+
+}
+#gnb li{
+	float: left;
+}
+#gnb li a{
+	display: block;
+	height: 50px;
+	padding: 0 10px;
+	line-height: 50px;
+	color: #FFF;
+	font-weight: bold;
+}
+#gnb li a:hover{
+	text-decoration: underline;
+}
+
+
+#content p{
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	text-align: justify; /*text 양쪽정렬*/
+}
+
+
+/* cake 추가
+	이미지 스프라이트 - 하나의 이미지를 가지고 활용하기
+*/
+#cake{
+	width: 660px;
+	clear: both; /*float 해제 시켜서 아래쪽에 배치시켜주기*/
+	border-top: 1px solid #889137;
+	border-bottom: 1px solid #889137;
+	overflow: auto;
+	/*ul의 h값 따로 지정해주지 않고
+	overflow auto로 넘치는 데이터도 보여주게 해서 border-btm 보이게 해주기*/
+}
+#cake li{
+	float: left;
+}
+#cake li a{
+	display: block;
+	width: 220px; height: 220px;
+	background: url(../images/cupcake.png);
+	background-repeat: no-repeat;
+}
+
+/* 위에 있는 #cake li의 계층구조가  더 높기 때문에 class로만 선택하면 적용 안 됨 - 부모id 붙여줘야 함*/
+#cake .icon_cake1 a{
+	background-position: top left;
+}
+#cake .icon_cake2 a{
+	background-position: top center;
+}
+#cake .icon_cake3 a{
+	background-position: top right;
+}
+
+
+#cake .icon_cake1 a:hover{
+	background-position: bottom left;
+}
+#cake .icon_cake2 a:hover{
+	background-position: bottom center;
+}
+#cake .icon_cake3 a:hover{
+	background-position: bottom right;
+}
+
+
+#point{
+	width: 40%;
+	position: absolute;
+	bottom: -45px;
+	right: -87px;
+}
+
+
+/* float 해제시키기 */
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* footer */
+#footer{
+	text-align: left;
+	padding: 5px;
+}
+#footer p{
+	color: #FFF;
+}

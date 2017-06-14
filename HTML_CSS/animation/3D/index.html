@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>css3 3D perspective</title>
+<style type="text/css">
+
+*{margin:0;padding:0;}
+
+div{
+	width: 100px; height: 100px;
+	margin: 100px;
+}
+.box{
+	background: #00F;
+	transition: all 2s ease-in;
+}
+.box:hover{
+	transform: scale(2) perspective(120px) rotateX(180deg);
+	background: #FF0;
+}
+.box1:hover{
+	transform: scale(2) rotateX(180deg);
+	background: #F00;
+}
+
+
+
+.no_pers,
+.pers{
+	width: 200px; height: 200px;
+	margin: 100px;
+	border: 2px solid black;
+}
+.no_pers img,
+.pers img{
+	width: 200px; height: 100px;
+}
+
+.rotateX img{
+	transform: rotateX(50deg);
+}
+
+perspective: 원근감
+.pers{
+	perspective: 300px;
+}
+</style>
+</head>
+<body>
+<!--원본-->
+<div>
+	<img src="insideOut2_bg.jpg" alt="" width="200px" />
+</div>
+
+<!--no_pers-->
+<div class="no_pers">
+	<div class="rotateX">
+		<img src="insideOut2_bg.jpg" alt="" width="200px" />
+	</div>
+</div>
+
+<!--pers-->
+<div class="pers">
+	<div class="rotateX">
+		<img src="insideOut2_bg.jpg" alt="" width="200px" />
+	</div>
+</div>
+
+
+
+
+<div class="box box1"></div>
+<div class="box box2"></div>
+
+</body>
+</html>
