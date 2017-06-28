@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*.container{bac}*/
+
+.slide{
+    width: 100%;
+}
+.slide li{
+    /*background-color: #00F;*/
+    background-image: url(../images/banner.jpg);
+    height: 700px;
+    
+}
+.slide li a{
+
+    
+}
