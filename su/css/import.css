@@ -60,3 +60,30 @@ a {
 .container-fluid {
   margin-top: 70px;
 }
+.container-fluid #wrapper {
+  background-color: #f1f1f1;
+}
+.container-fluid .row {
+  margin: 0;
+}
+.container-fluid .row #content {
+  width: 960px;
+  margin: 30px auto 0 auto;
+}
+.container-fluid .row #content div[class~="box"] {
+  height: 300px;
+}
+/*@media all and 각각의 속성에 띄어쓰기 해주기*/
+/*desktop*/
+/*tablet*/
+@media all and (max-width: 768px) {
+  #content {
+    width: 630px;
+  }
+}
+/*mobile*/
+@media all and (max-width: 480px) {
+  #content {
+    width: 300px;
+  }
+}
