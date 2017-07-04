@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 1px solid #F00;
+}
+html,
+body {
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/*
+    lessc import.less ../css/import.css
+    $ 부모선택자
+*/
+.navbar {
+  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  height: 70px;
+  z-index: 999;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar .navbar-brand {
+  height: 70px;
+  line-height: 40px;
+}
+.navbar #navbarText {
+  height: 70px;
+}
+.navbar #navbarText .navbar-nav {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.navbar #navbarText .navbar-nav li {
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+}
+.navbar #navbarText .navbar-nav li a {
+  padding: 0 23px;
+  display: block;
+  color: #333;
+  height: 70px;
+  line-height: 70px;
+}
+.navbar #navbarText .navbar-text {
+  height: 70px;
+  line-height: 70px;
+  margin: 0 15px;
+}
+.container-fluid {
+  margin-top: 70px;
+}
