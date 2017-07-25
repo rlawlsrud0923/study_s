@@ -158,7 +158,7 @@
           <h2>A1</h2>
           <div class="title">dfdsfdfsdf</div>
           <div class="lg-img">
-            
+            Level 2: .col-xs-4 .col-sm-6
           </div>
           <div class="lg-txt"></div>
         </div>
@@ -200,7 +200,7 @@
           <h2>A1</h2>
           <div class="title">dfdsfdfsdf</div>
           <div class="lg-img">
-            
+            Level 2: .col-xs-4 .col-sm-6
           </div>
           <div class="lg-txt"></div>
         </div>
@@ -226,7 +226,7 @@
               <h2>A1</h2>
               <div class="title">dfdsfdfsdf</div>
               <div class="lg-img">
-                
+                Level 2: .col-xs-4 .col-sm-6
               </div>
               <div class="lg-txt"></div>
             </div>

@@ -1,10 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid #F00;
+  outline: 1px dotted #00f;
 }
-html,
-body {
+html, body {
   height: 100%;
 }
 ul {
@@ -16,7 +15,7 @@ a {
 }
 /*
     lessc import.less ../css/import.css
-    $ 부모선택자
+    $ �θ�����
 */
 .navbar {
   margin-bottom: 0;
@@ -52,6 +51,7 @@ a {
   color: #333;
   height: 70px;
   line-height: 70px;
+  text-transform: capitalize;
 }
 .navbar #navbarText ul li ul {
   float: right;
@@ -61,6 +61,7 @@ a {
   display: inline;
   border-radius: 15px;
   border: 1px solid #ccc;
+  text-transform: uppercase;
 }
 .navbar #navbarText ul li ul li span {
   padding: 0 23px;
@@ -201,26 +202,6 @@ a {
 .container-fluid #wrapper #content section .product-box .right .product:nth-child(1) {
   margin-right: 0;
 }
-.container-fluid #wrapper #content section .product-box .right .product:nth-child(2),
-.container-fluid #wrapper #content section .product-box .right .product:nth-child(3) {
+.container-fluid #wrapper #content section .product-box .right .product:nth-child(2), .container-fluid #wrapper #content section .product-box .right .product:nth-child(3) {
   margin-top: 30px;
-}
-/*@media all and 각각의 속성에 띄어쓰기 해주기*/
-/*desktop*/
-@media all and (max-width: 1024px) {
-  .container-fluid #wrapper #content {
-    width: 960px;
-  }
-}
-/*tablet*/
-@media all and (max-width: 768px) {
-  #content {
-    width: 630px;
-  }
-}
-/*mobile*/
-@media all and (max-width: 480px) {
-  #content {
-    width: 300px;
-  }
 }
