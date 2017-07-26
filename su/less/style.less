@@ -39,7 +39,6 @@ a{
             height: 70px;
             
             li{
-                // padding: 0 23px;
                 line-height: 70px;
                 display: inline-block;
                 
@@ -52,25 +51,40 @@ a{
                     line-height: 70px;
 					text-transform: capitalize;
                 }
-                ul{
-                    float: right;
-                    margin-left: 100px;
-                    li{
-                        a{
-                            display: inline;
-                            border-radius: 15px;
-                            border: 1px solid #ccc;
-							text-transform: uppercase;
-                        }
-                        span{
-                            padding: 0 23px;
-                            //display: inline-block;
-                            margin: 0;
-                        }
-                       
-                    }
-                }
             }
+
+
+
+			li.nav-icon{
+				float: right;
+				margin-left: 100px;
+
+				a{					    
+					display: inline-block;
+					padding: 0;
+					border-radius: 15px;
+					border: 1px solid #ccc;
+					text-transform: uppercase;
+					
+					height: 30px;
+					overflow: hidden;
+					position: relative;
+					top: 10px;
+					line-height: 30px;
+
+					span.flaticon-login:after,span.flaticon-cart:after{
+						font-size: 12px;
+					}
+					span{
+						padding: 0 5px;
+						margin: 0;
+						display: table-cell;
+						vertical-align: middle;
+						font-size: 11px;
+					}
+				}
+			}
+
         }
     }
 }
@@ -112,6 +126,7 @@ a{
                         position: absolute;
                         top: 20px;
                         left: 20px;
+
                         margin: 0;
                         padding: 0;
                         font-size: 30px;
@@ -123,9 +138,11 @@ a{
                         position: absolute;
                         top: 60px;
                         left: 0;
+
                         width: auto;
                         height: 30px;
                         line-height: 30px;
+
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
                         background-color: rgba(255,255,255,0.9);
@@ -139,10 +156,10 @@ a{
                     div[class$="img"]{
                         background-color: #abbdcc;
                         height: 300px;
-                        display: inline-block;
+                        /* display: inline-block; */
                     }
                     div[class$="txt"]{
-                        width: 100%;
+                        /* width: 100%; */
                         height: 100px;
                         color: #666;
                         background-color: #FFF;
@@ -150,44 +167,53 @@ a{
                         font-size: 13px;
                         h4{
                             font-size: 13px;
-                            margin: 20px 0 0 20px;
+                            margin: 20px 0 20px 20px;
                             text-transform: uppercase;
                         }
                         .info{
-                            padding: 20px 0 0 20px;
+							display: table;
+							width: 100%;
                             
                             
                             
                             .info-left{
                                 float: left;
+								padding: 0;
+								display: table;
+								padding-left: 20px;
                                 
                                 p{
                                     display: table-cell;
                                 }
                             }
+							.info-right{
+								display: table-cell;
+								vertical-align: top;
+								padding-right: 5px;
                             
-                            .cart-btn{
-                                font-size: 13px;
-                                border-radius: 30px;
-                                border: 1px solid #ccc;
-                                float: right;
-                                margin-right: 20px;
-                            
-                                .flaticon-cart{
-                                    padding: 0 10px;
-                                    border-right: 1px solid #ccc;
-                                    display: inline;
-                                }
-                                .flaticon-cart:before{
-                                    font-size: 13px;
-                                }
-                                p{
-                                    padding: 0 10px;
-                                    margin: 0;
-                                    display: inline;
-        
-                                }
-                            }
+								.cart-btn{
+									font-size: 13px;
+									border-radius: 30px;
+									border: 1px solid #ccc;
+									float: right;
+									display: table;
+								
+									.flaticon-cart{
+										padding: 0 10px;
+										border-right: 1px solid #ccc;
+										display: table-cell;
+									}
+									.flaticon-cart:before{
+										font-size: 20px;
+									}
+									p{
+										padding: 0 10px;
+										margin: 0;
+										display: table-cell;
+										vertical-align: middle;
+									}
+								}
+							}
                         }
                     }
                     div[class|="lg"]{
